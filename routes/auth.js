@@ -68,7 +68,7 @@ router.post('/signup', [
 })
 
 // Authenticate a user using: POST "/api/auth/login". No logic required 
-router.post('/login', fetchuser, [
+router.post('/login', [
   body('email','Enter a valid Email').isEmail(),
   body('password','Enter a valid Password').isLength({min:5}),
 ], async (req, res)=>{
