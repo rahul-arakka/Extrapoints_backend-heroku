@@ -5,6 +5,7 @@ const app = express();
 const path = require("path");
 require('dotenv').config();
 
+
 const PORT = process.env.PORT || 5000;
 
 // Connect/Express Middleware used to enable cors.
@@ -31,6 +32,7 @@ if(process.env.NODE_ENV === 'production'){
         res.send("here working fine on /");
       }) 
 }
+
 
 app.listen(PORT,()=>{
     console.log(`Server started at port : ${PORT}`);
